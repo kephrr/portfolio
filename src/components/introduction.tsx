@@ -3,16 +3,10 @@ import { EmailButton } from "./ui/email-button";
 import { GithubButton } from "./ui/github-button";
 import shoto from "../assets/images/shoto.jpg"
 import { TypingText } from "./ui/react-typing-text-tailwind";
-import { useEffect, useState } from "react";
 import { useScrollAnimation } from "./hooks/use-scroll-animation";
 
 export const Introduction = () => {
     const [heroRef, heroVisible] = useScrollAnimation(0.1);
-    const [loaded, setLoaded] = useState(false);
-
-    useEffect(() => {
-        setLoaded(true);
-    }, []);
 
     return <div ref={heroRef} className="w-full bg-zinc-900 min-h-[450px] 
     overflow-hidden relative ">
